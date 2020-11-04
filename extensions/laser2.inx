@@ -10,7 +10,8 @@
     <param name="travel-speed" type="int" min="0" max="15000" _gui-text="Скорость перемещения (мм / мин или дюйм / мин):">3000</param>
     <param name="laser-speed" type="int" min="0" max="15000" _gui-text="Скорость лазера (мм / мин или дюйм / мин):">750</param>
     <param name="laser-power" type="int" min="0" max="20000" _gui-text="Мощность лазера S# (0-255 или 0-12000):">255</param>
-    <param name="power-delay" type="float" min="0" max="1000" _gui-text="Задержка включения (мс или с):">0</param>
+    <param name="power-delay" type="int" min="0" max="1000" _gui-text="Задержка включения (мс):">0</param>
+    <param name="power-off-delay" type="int" min="0" max="1000" _gui-text="Задержка выключения (мс):">0</param>
     <param name="set-home-first" type="boolean" _gui-text="Вначале установить положение home">true</param>
     <param name="height" type="float" min="0" max="1000" _gui-text="Высота (мм или дюйм):">50</param>
     <param name="passes" type="int" min="1" max="100" _gui-text="Проходы:">1</param>

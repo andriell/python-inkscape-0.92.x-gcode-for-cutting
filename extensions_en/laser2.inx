@@ -9,7 +9,6 @@
     <param name="laser-off-command" type="string" _gui-text="Laser OFF Command:">M106</param>
     <param name="travel-speed" type="int" min="0" max="15000" _gui-text="Travel Speed (mm/min or in/min):">3000</param>
     <param name="laser-speed" type="int" min="0" max="15000" _gui-text="Laser Speed (mm/min or in/min):">750</param>
-    <param name="laser-power" type="int" min="0" max="20000" _gui-text="Laser Power S# (0-255 or 0-12000):">255</param>
     <param name="power-delay" type="int" min="0" max="1000" _gui-text="Power-On Delay (ms):">0</param>
     <param name="power-off-delay" type="int" min="0" max="1000" _gui-text="Power-Off Delay (ms):">0</param>
     <param name="set-home-first" type="boolean" _gui-text="Set the home position first">true</param>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>G-code генератор</_name>
+    <_name>G-code для резки лазером</_name>
     <id>gcode_for_cutting</id>
     <dependency type="executable" location="extensions">laser2.py</dependency>
     <dependency type="executable" location="extensions">inkex.py</dependency>
@@ -27,7 +27,7 @@
 
     <effect>
         <effects-menu>
-            <submenu _name="G-code для резки"/>
+            <submenu _name="G-code генератор"/>
         </effects-menu>
         <object-type>path</object-type>
     </effect>

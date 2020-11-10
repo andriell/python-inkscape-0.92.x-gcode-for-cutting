@@ -2529,10 +2529,10 @@ class laser_gcode(inkex.Effect):
     def export_gcode(self, gcode):
         gcode_pass = gcode
         for x in range(1, self.options.passes):
-            gcode += "G91\nG1 Z-" + self.options.pass_depth + "\nG90\n" + gcode_pass
+            gcode += "\n;Pass %d\nG91\nG1 Z-%.3f\nG90\n%s" % (x, self.options.pass_depth, gcode_pass)
         f = open(self.options.directory + self.options.file, "w")
-        f.write(
-            self.options.laser_off_command + " S0" + "\n" + self.header + "G1 F" + self.options.travel_speed + "\n" + gcode + self.footer)
+        f.write("%s\n%s\nG1 F%d\n\n;Pass 0\n%s%s" % (
+            self.options.laser_off_command, self.header, self.options.travel_speed, gcode, self.footer))
         f.close()
 
     def __init__(self):
@@ -2550,11 +2550,11 @@ class laser_gcode(inkex.Effect):
                                      default="M05", help="Laser gcode end command")
         self.OptionParser.add_option("", "--laser-speed", action="store", type="int", dest="laser_speed", default="750",
                                      help="Laser speed (mm/min)")
-        self.OptionParser.add_option("", "--travel-speed", action="store", type="string", dest="travel_speed",
+        self.OptionParser.add_option("", "--travel-speed", action="store", type="int", dest="travel_speed",
                                      default="3000", help="Travel speed (mm/min)")
         self.OptionParser.add_option("", "--passes", action="store", type="int", dest="passes", default="1",
                                      help="Quantity of passes")
-        self.OptionParser.add_option("", "--pass-depth", action="store", type="string", dest="pass_depth", default="1",
+        self.OptionParser.add_option("", "--pass-depth", action="store", type="float", dest="pass_depth", default="1",
                                      help="Depth of laser cut")
         self.OptionParser.add_option("", "--power-delay", action="store", type="int", dest="power_delay",
                                      default="0", help="Laser power-on delay (ms)")
@@ -2809,8 +2809,8 @@ class laser_gcode(inkex.Effect):
         print_("Curve: " + str(curve))
         g = ""
 
-        lg, f = 'G00', "F%f" % tool['penetration feed']
-        penetration_feed = "F%s" % tool['penetration feed']
+        lg, f = 'G00', "F%d" % tool['penetration feed']
+        penetration_feed = "F%d" % tool['penetration feed']
         current_a = 0
         for i in range(1, len(curve)):
             #    Creating Gcode for curve between s=curve[i-1] and si=curve[i] start at s[0] end at s[4]=si[0]
@@ -3361,10 +3361,9 @@ class laser_gcode(inkex.Effect):
             "id": "Laser Engraver",
             "penetration feed": self.options.laser_speed,
             "feed": self.options.laser_speed,
-            "gcode before path": ("G4 P0 \n" + self.options.laser_command + "\nG4 P" + str(self.options.power_delay)),
-            "gcode after path": (
-                    "G4 P0 \n" + self.options.laser_off_command + "\nG4 P" + str(
-                self.options.power_off_delay) + "\nG1 F" + self.options.travel_speed),
+            "gcode before path": ("G4 P0 \n%s\nG4 P%d" % (self.options.laser_command, self.options.power_delay)),
+            "gcode after path": ("G4 P0 \n%s\nG4 P%d\nG1 F%d" % (
+                self.options.laser_off_command, self.options.power_off_delay, self.options.travel_speed)),
         }
 
         self.get_info()

@@ -14,7 +14,7 @@
     <param name="set-home-first" type="boolean" _gui-text="Вначале установить положение home">true</param>
     <param name="height" type="float" min="0" max="1000" _gui-text="Высота (мм или дюйм):">50</param>
     <param name="passes" type="int" min="1" max="100" _gui-text="Проходы:">1</param>
-    <param name="pass-depth" type="float" min="0" max="10" _gui-text="Глубина прохода (мм или дюйм):">1</param>
+    <param name="pass-depth" type="float" min="0" max="10" precision="3" _gui-text="Глубина прохода (мм или дюйм):">1</param>
     <param name="directory" type="string" _gui-text="Каталог:"></param>
     <param name="filename" type="string" _gui-text="Имя файла:">cutting.gcode</param>
     <param name="add-numeric-suffix-to-filename" type="boolean" _gui-text="Добавить числовой суффикс к имени файла">true</param>

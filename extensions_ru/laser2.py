@@ -2808,6 +2808,13 @@ class laser_gcode(inkex.Effect):
         print_("working on curve")
         print_("Curve: " + str(curve))
         g = ""
+        layer_label = "?"
+        for key in layer.keys():
+            if key.endswith("label"):
+                layer_label = layer.get(key).encode('ascii', 'ignore')
+                print_("layer_label ", layer_label)
+                break
+        g += "\n;Begin of " + layer_label + "\n"
 
         lg, f = 'G00', "F%d" % tool['penetration feed']
         penetration_feed = "F%d" % tool['penetration feed']
@@ -2817,14 +2824,14 @@ class laser_gcode(inkex.Effect):
             s, si = curve[i - 1], curve[i]
             feed = f if lg not in ['G01', 'G02', 'G03'] else ''
             if s[1] == 'move':
-                g += "G1 " + c(si[0]) + "\n" + tool['gcode before path'] + "\n"
+                g += "G1" + c(si[0]) + "\n" + tool['gcode before path'] + "\n"
                 lg = 'G00'
             elif s[1] == 'end':
                 g += tool['gcode after path'] + "\n"
                 lg = 'G00'
             elif s[1] == 'line':
                 if lg == "G00": g += "G1 " + feed + "\n"
-                g += "G1 " + c(si[0]) + "\n"
+                g += "G1" + c(si[0]) + "\n"
                 lg = 'G01'
             elif s[1] == 'arc':
                 r = [(s[2][0] - s[0][0]), (s[2][1] - s[0][1])]
@@ -2839,10 +2846,11 @@ class laser_gcode(inkex.Effect):
                         g += ("G2" if s[3] < 0 else "G3") + c(si[0]) + " R%f" % (r) + "\n"
                     lg = 'G02'
                 else:
-                    g += "G1 " + c(si[0]) + " " + feed + "\n"
+                    g += "G1" + c(si[0]) + " " + feed + "\n"
                     lg = 'G01'
         if si[1] == 'end':
             g += tool['gcode after path'] + "\n"
+        g += ";End of " + layer_label + "\n\n"
         return g
 
     def get_transforms(self, g):
@@ -3361,8 +3369,8 @@ class laser_gcode(inkex.Effect):
             "id": "Laser Engraver",
             "penetration feed": self.options.laser_speed,
             "feed": self.options.laser_speed,
-            "gcode before path": ("G4 P0 \n%s\nG4 P%d" % (self.options.laser_command, self.options.power_delay)),
-            "gcode after path": ("G4 P0 \n%s\nG4 P%d\nG1 F%d" % (
+            "gcode before path": (";path begin\n%s\nG4 P%d" % (self.options.laser_command, self.options.power_delay)),
+            "gcode after path": ("%s\nG4 P%d\nG1 F%d\n;path end" % (
                 self.options.laser_off_command, self.options.power_off_delay, self.options.travel_speed)),
         }
 

@@ -1,3 +1,5 @@
+[![Watch the video](img/video.png)](https://youtu.be/iXYv9cEnomw)
+
 # Inkscape 0.92.x плагин G-code генератор для резки лазером
 
 Это плагин для редактора Inkscape версии 0.92.x предназначенный для генерации Gcode, для лазерной резки.

@@ -102,27 +102,27 @@ intersection_tolerance = 0.00001
 styles = {
     "loft_style": {
         'main curve': simplestyle.formatStyle(
-            {'stroke': '#88f', 'fill': 'none', 'stroke-width': '1', 'marker-end': 'url(#Arrow2Mend)'}),
+            {'stroke': '#88f', 'fill': 'none', 'stroke-width': '0.1', 'marker-end': 'url(#Arrow2Mend)'}),
     },
     "biarc_style": {
         'biarc0': simplestyle.formatStyle(
-            {'stroke': '#88f', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#88f', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'biarc1': simplestyle.formatStyle(
-            {'stroke': '#8f8', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#8f8', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'line': simplestyle.formatStyle(
-            {'stroke': '#f88', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#f88', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'area': simplestyle.formatStyle(
             {'stroke': '#777', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
     },
     "biarc_style_dark": {
         'biarc0': simplestyle.formatStyle(
-            {'stroke': '#33a', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#33a', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'biarc1': simplestyle.formatStyle(
-            {'stroke': '#3a3', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#3a3', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'line': simplestyle.formatStyle(
-            {'stroke': '#a33', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#a33', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'area': simplestyle.formatStyle(
-            {'stroke': '#222', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.3'}),
+            {'stroke': '#222', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
     },
     "biarc_style_dark_area": {
         'biarc0': simplestyle.formatStyle(
@@ -132,60 +132,60 @@ styles = {
         'line': simplestyle.formatStyle(
             {'stroke': '#a33', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'area': simplestyle.formatStyle(
-            {'stroke': '#222', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.3'}),
+            {'stroke': '#222', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
     },
     "biarc_style_i": {
         'biarc0': simplestyle.formatStyle(
-            {'stroke': '#880', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#880', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'biarc1': simplestyle.formatStyle(
-            {'stroke': '#808', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#808', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'line': simplestyle.formatStyle(
-            {'stroke': '#088', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#088', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'area': simplestyle.formatStyle(
-            {'stroke': '#999', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.3'}),
+            {'stroke': '#999', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
     },
     "biarc_style_dark_i": {
         'biarc0': simplestyle.formatStyle(
-            {'stroke': '#dd5', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#dd5', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'biarc1': simplestyle.formatStyle(
-            {'stroke': '#d5d', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#d5d', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'line': simplestyle.formatStyle(
-            {'stroke': '#5dd', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '1'}),
+            {'stroke': '#5dd', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'area': simplestyle.formatStyle(
-            {'stroke': '#aaa', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.3'}),
+            {'stroke': '#aaa', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
     },
     "biarc_style_lathe_feed": {
         'biarc0': simplestyle.formatStyle(
-            {'stroke': '#07f', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '.4'}),
+            {'stroke': '#07f', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'biarc1': simplestyle.formatStyle(
-            {'stroke': '#0f7', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '.4'}),
+            {'stroke': '#0f7', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'line': simplestyle.formatStyle(
-            {'stroke': '#f44', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '.4'}),
+            {'stroke': '#f44', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'area': simplestyle.formatStyle(
-            {'stroke': '#aaa', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.3'}),
+            {'stroke': '#aaa', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
     },
     "biarc_style_lathe_passing feed": {
         'biarc0': simplestyle.formatStyle(
-            {'stroke': '#07f', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '.4'}),
+            {'stroke': '#07f', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'biarc1': simplestyle.formatStyle(
-            {'stroke': '#0f7', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '.4'}),
+            {'stroke': '#0f7', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'line': simplestyle.formatStyle(
-            {'stroke': '#f44', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '.4'}),
+            {'stroke': '#f44', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'area': simplestyle.formatStyle(
-            {'stroke': '#aaa', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.3'}),
+            {'stroke': '#aaa', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
     },
     "biarc_style_lathe_fine feed": {
         'biarc0': simplestyle.formatStyle(
-            {'stroke': '#7f0', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '.4'}),
+            {'stroke': '#7f0', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'biarc1': simplestyle.formatStyle(
-            {'stroke': '#f70', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '.4'}),
+            {'stroke': '#f70', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'line': simplestyle.formatStyle(
-            {'stroke': '#744', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '.4'}),
+            {'stroke': '#744', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
         'area': simplestyle.formatStyle(
-            {'stroke': '#aaa', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.3'}),
+            {'stroke': '#aaa', 'fill': 'none', "marker-end": "url(#DrawCurveMarker)", 'stroke-width': '0.1'}),
     },
-    "area artefact": simplestyle.formatStyle({'stroke': '#ff0000', 'fill': '#ffff00', 'stroke-width': '1'}),
-    "area artefact arrow": simplestyle.formatStyle({'stroke': '#ff0000', 'fill': '#ffff00', 'stroke-width': '1'}),
+    "area artefact": simplestyle.formatStyle({'stroke': '#ff0000', 'fill': '#ffff00', 'stroke-width': '0.1'}),
+    "area artefact arrow": simplestyle.formatStyle({'stroke': '#ff0000', 'fill': '#ffff00', 'stroke-width': '0.1'}),
     "dxf_points": simplestyle.formatStyle({"stroke": "#ff0000", "fill": "#ff0000"}),
 
 }
